@@ -17,11 +17,11 @@ public class InsuranceTypeController {
     private InsuranceTypeService insuranceTypeService;
 
     @PostMapping("getIn")
-    public InsuranceType selectById(int id){
+    public InsuranceType selectById(int id) {
         InsuranceType insuranceType = insuranceTypeService.selectById(id);
-        if (insuranceType == null){
+        if (insuranceType == null) {
             return null;
-        }else {
+        } else {
             return insuranceType;
         }
     }

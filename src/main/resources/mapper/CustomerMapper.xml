@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.CustomerDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.model.Customer">
+        <id column="idCard" jdbcType="VARCHAR" property="idCard"/>
+        <result column="cname" jdbcType="VARCHAR" property="cname"/>
+        <result column="birthday" jdbcType="VARCHAR" property="birthday"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="gender" jdbcType="VARCHAR" property="gender"/>
+        <result column="authority" jdbcType="INTEGER" property="authority"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        idCard,Cname,birthday,phone,gender,authority
+    </sql>
+
+    <select id="selectById" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from customer
+        where idCard = #{idCard,jdbcType=VARCHAR}
+    </select>
+
+</mapper>
