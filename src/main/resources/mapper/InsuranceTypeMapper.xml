@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.InsuranceTypeDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.model.InsuranceType">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="iname" jdbcType="VARCHAR" property="iname"/>
+        <result column="ageStart" jdbcType="VARCHAR" property="ageStart"/>
+        <result column="ageEnd" jdbcType="VARCHAR" property="ageEnd"/>
+        <result column="benefit" jdbcType="VARCHAR" property="benefit"/>
+        <result column="payment" jdbcType="VARCHAR" property="payment"/>
+        <result column="premium" jdbcType="INTEGER" property="premium"/>
+        <result column="advantage" jdbcType="VARCHAR" property="advantage"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,iname,ageStart,ageEnd,benefit,payment,premium,advantage
+    </sql>
+
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from insuranceType
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+</mapper>
