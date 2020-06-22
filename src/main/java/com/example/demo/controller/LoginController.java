@@ -43,7 +43,7 @@ public class LoginController {
     private SalesmenService salesmenService;
 
     @PostMapping("salesmen")
-    public Salesmen selectByJobNumber(String jobNumber, String password) {
+    public JSONObject selectByJobNumber(String jobNumber, String password) {
         JSONObject object = new JSONObject();
         Salesmen salesmen = salesmenService.selectByJobNumber(jobNumber);
         if (salesmen == null) {
@@ -58,7 +58,7 @@ public class LoginController {
                 object.put("data", null);
             }
         }
-        return salesmen;
+        return object;
     }
 
     @PostMapping("admin")

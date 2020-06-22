@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("test")
+@RequestMapping("update")
 @CrossOrigin
-public class test {
-    @PostMapping("/hello")
-    public String hello(){
+public class Update {
+
+    @PostMapping("signUp")
+    public String insertCustomer(String idCard, String password, String birthday, String cname, String gender){
         return "hello world";
     }
 
