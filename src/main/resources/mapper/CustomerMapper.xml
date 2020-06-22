@@ -8,10 +8,11 @@
         <result column="phone" jdbcType="VARCHAR" property="phone"/>
         <result column="gender" jdbcType="VARCHAR" property="gender"/>
         <result column="authority" jdbcType="INTEGER" property="authority"/>
+        <result column="password" jdbcType="INTEGER" property="password"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        idCard,Cname,birthday,phone,gender,authority
+        idCard,Cname,birthday,phone,gender,authority,password
     </sql>
 
     <select id="selectById" parameterType="java.lang.String" resultMap="BaseResultMap">

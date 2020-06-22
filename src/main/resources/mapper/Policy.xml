@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.PolicyDao">
+    <resultMap id="BaseResultMap" type="com.example.demo.model.Policy">
+        <id column="pid" jdbcType="VARCHAR" property="pid"/>
+        <result column="date" jdbcType="VARCHAR" property="date"/>
+        <result column="hName" jdbcType="VARCHAR" property="hName"/>
+        <result column="hGender" jdbcType="VARCHAR" property="hGender"/>
+        <result column="hBir" jdbcType="VARCHAR" property="hBir"/>
+        <result column="hAddress" jdbcType="VARCHAR" property="hAddress"/>
+        <result column="hZipCode" jdbcType="VARCHAR" property="hZipCode"/>
+        <result column="aName" jdbcType="VARCHAR" property="aName"/>
+        <result column="aGender" jdbcType="VARCHAR" property="aGender"/>
+        <result column="aBir" jdbcType="VARCHAR" property="aBir"/>
+        <result column="aAddress" jdbcType="VARCHAR" property="aAddress"/>
+        <result column="aZipCode" jdbcType="VARCHAR" property="aZipCode"/>
+        <result column="iId" jdbcType="INTEGER" property="iId"/>
+        <result column="iName" jdbcType="VARCHAR" property="iName"/>
+        <result column="jobNumber" jdbcType="VARCHAR" property="jobNumber"/>
+        <result column="sName" jdbcType="VARCHAR" property="sName"/>
+        <result column="sPhone" jdbcType="VARCHAR" property="sPhone"/>
+        <result column="bName1" jdbcType="VARCHAR" property="bName1"/>
+        <result column="bNumber1" jdbcType="INTEGER" property="bNumber1"/>
+        <result column="bIdCard1" jdbcType="VARCHAR" property="bIdCard1"/>
+        <result column="bName2" jdbcType="VARCHAR" property="bName2"/>
+        <result column="bNumber2" jdbcType="INTEGER" property="bNumber2"/>
+        <result column="bIdCard2" jdbcType="VARCHAR" property="bIdCard2"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        hName,hGender,hBir,hAddress,hZipCode,aName,aGender,aBir,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
+    </sql>
+
+    <select id="selectByPid" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from policy
+        where pid = #{pid,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

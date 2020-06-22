@@ -17,6 +17,8 @@ public class Customer {
     
     private Integer authority;
 
+    private String password;
+
     /**
      * @return idCard
      */
@@ -99,5 +101,19 @@ public class Customer {
      */
     public void setAuthority(int authority) {
         this.authority = authority;
+    }
+
+    /**
+     * @return password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password
+     */
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 }
