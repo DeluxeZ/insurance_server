@@ -6,4 +6,5 @@ public interface CustomerService {
 
     Customer selectById(String idCard);
 
+    int insertCustomer(Customer customer);
 }

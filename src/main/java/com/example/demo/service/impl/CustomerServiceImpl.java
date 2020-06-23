@@ -22,4 +22,9 @@ public class CustomerServiceImpl implements CustomerService {
             return customer;
         }
     }
+
+    @Override
+    public int insertCustomer(Customer customer) {
+        return customerDao.insertCustomer(customer);
+    }
 }

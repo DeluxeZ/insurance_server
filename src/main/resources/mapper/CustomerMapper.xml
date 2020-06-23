@@ -22,4 +22,10 @@
         where idCard = #{idCard,jdbcType=VARCHAR}
     </select>
 
+    <insert id="insertCustomer">
+        insert into customer(idCard, cname, birthday, phone, gender, authority, password)
+        value(#{customer.idCard}, #{customer.cname}, #{customer.birthday}, #{customer.phone},
+        #{customer.gender}, #{customer.authority}, #{customer.password})
+    </insert>
+
 </mapper>

@@ -9,4 +9,6 @@ public interface CustomerDao {
 
     Customer selectById(@Param("idCard") String idCard);
 
+    int insertCustomer(@Param("customer") Customer customer);
+
 }

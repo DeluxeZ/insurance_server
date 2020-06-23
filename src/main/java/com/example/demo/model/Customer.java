@@ -14,10 +14,20 @@ public class Customer {
     private String phone;
 
     private String gender;
-    
+
     private Integer authority;
 
     private String password;
+
+    public Customer(String idCard, String cname, String birthday, String phone, String gender, int authority, String password) {
+        this.idCard = idCard;
+        this.cname = cname;
+        this.birthday = birthday;
+        this.password = password;
+        this.phone = phone;
+        this.gender = gender;
+        this.authority = authority;
+    }
 
     /**
      * @return idCard
