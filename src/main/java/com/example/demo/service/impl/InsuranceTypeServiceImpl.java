@@ -6,6 +6,7 @@ import com.example.demo.service.InsuranceTypeService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class InsuranceTypeServiceImpl implements InsuranceTypeService {
@@ -20,5 +21,11 @@ public class InsuranceTypeServiceImpl implements InsuranceTypeService {
 //            throw new ServerException("暂无该保险");
 //        }
         return insuranceType;
+    }
+
+    @Override
+    public List<InsuranceType> selectAll() {
+        List<InsuranceType> insuranceTypes = insuranceTypeDao.selectAll();
+        return insuranceTypes;
     }
 }

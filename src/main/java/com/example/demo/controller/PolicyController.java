@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("policy")
@@ -21,5 +22,10 @@ public class PolicyController {
     public Policy selectByPid(String pid) {
         Policy policy = policyService.selectByPid(pid);
         return policy;
+    }
+
+    @PostMapping("screen")
+    public List<Policy> selectByStatus(String idCard, int status){
+        return null;
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("insurance")
@@ -24,5 +25,11 @@ public class InsuranceTypeController {
         } else {
             return insuranceType;
         }
+    }
+
+    @PostMapping("getInAll")
+    public List<InsuranceType> selectAll(){
+        List<InsuranceType> insuranceTypes = insuranceTypeService.selectAll();
+        return insuranceTypes;
     }
 }
