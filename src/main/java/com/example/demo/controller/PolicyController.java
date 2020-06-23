@@ -26,6 +26,18 @@ public class PolicyController {
 
     @PostMapping("screen")
     public List<Policy> selectByStatus(String idCard, int status){
-        return null;
+        List<Policy> policies;
+        if (status == 5) {
+            policies = policyService.selectAll(idCard, status);
+        } else {
+            policies = policyService.selectByStatus(idCard, status);
+        }
+        return policies;
+    }
+
+    @PostMapping("sign")
+    public int updateStatus(String pid, int status){
+        int i = policyService.updateStatus(pid, status + 1);
+        return i;
     }
 }

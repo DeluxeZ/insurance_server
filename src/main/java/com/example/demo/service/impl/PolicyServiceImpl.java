@@ -6,6 +6,7 @@ import com.example.demo.service.PolicyService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class PolicyServiceImpl implements PolicyService {
@@ -17,5 +18,22 @@ public class PolicyServiceImpl implements PolicyService {
     public Policy selectByPid(String pid) {
         Policy policy = policyDao.selectByPid(pid);
         return policy;
+    }
+
+    @Override
+    public List<Policy> selectByStatus(String idCard, int status) {
+        List<Policy> policies = policyDao.selectByStatus(idCard, status);
+        return policies;
+    }
+
+    @Override
+    public List<Policy> selectAll(String idCard, int status) {
+        List<Policy> policies = policyDao.selectAll(idCard, status);
+        return policies;
+    }
+
+    @Override
+    public int updateStatus(String pid, int status) {
+        return policyDao.updateStatus(pid, status);
     }
 }

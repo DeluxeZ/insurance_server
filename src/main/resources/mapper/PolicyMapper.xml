@@ -29,7 +29,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        hName,hGender,hBir,hAddress,hZipCode,aName,aGender,aBir,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
+        Pid,hName,hGender,hBir,hAddress,hZipCode,aName,aGender,aBir,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
     </sql>
 
     <select id="selectByPid" parameterType="java.lang.String" resultMap="BaseResultMap">
@@ -38,5 +38,25 @@
         from policy
         where pid = #{pid,jdbcType=VARCHAR}
     </select>
+
+    <select id="selectByStatus" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from policy
+        where HIdCard = #{idCard} and status = #{status}
+    </select>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from policy
+        where HIdCard = #{idCard}
+    </select>
+
+    <update id="updateStatus">
+        update policy
+        set status = #{status}
+        where pid = #{pid}
+    </update>
 
 </mapper>
