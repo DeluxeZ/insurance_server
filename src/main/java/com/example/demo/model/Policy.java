@@ -15,6 +15,8 @@ public class Policy {
 
     private String hBir;
 
+    private String hIdCard;
+
     private String hAddress;
 
     private String hZipCode;
@@ -24,6 +26,8 @@ public class Policy {
     private String aGender;
 
     private String aBir;
+
+    private String aIdCard;
 
     private String aAddress;
 
@@ -81,6 +85,10 @@ public class Policy {
         return hBir;
     }
 
+    public String getHIdCard() {
+        return hIdCard;
+    }
+
     public String getHAddress() {
         return hAddress;
     }
@@ -99,6 +107,10 @@ public class Policy {
 
     public String getABir() {
         return aBir;
+    }
+
+    public String getAIdCard() {
+        return aIdCard;
     }
 
     public String getAAddress() {
@@ -169,6 +181,10 @@ public class Policy {
         this.hBir = hBir == null ? null : hBir.trim();
     }
 
+    public void sethIdCard(String hIdCard) {
+        this.hIdCard = hIdCard == null ? null : hIdCard.trim();
+    }
+
     public void setHAddress(String hAddress) {
         this.hAddress = hAddress == null ? null : hAddress.trim();
     }
@@ -187,6 +203,10 @@ public class Policy {
 
     public void setABir(String aBir) {
         this.aBir = aBir == null ? null : aBir.trim();
+    }
+
+    public void setAIdCard(String aIdCard) {
+        this.aIdCard = aIdCard == null ? null : aIdCard.trim();
     }
 
     public void setAAddress(String aAddress) {

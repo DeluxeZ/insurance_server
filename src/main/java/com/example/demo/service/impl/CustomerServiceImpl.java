@@ -27,4 +27,5 @@ public class CustomerServiceImpl implements CustomerService {
     public int insertCustomer(Customer customer) {
         return customerDao.insertCustomer(customer);
     }
+
 }

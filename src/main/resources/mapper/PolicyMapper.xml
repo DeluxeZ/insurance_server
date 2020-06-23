@@ -7,11 +7,13 @@
         <result column="hName" jdbcType="VARCHAR" property="hName"/>
         <result column="hGender" jdbcType="VARCHAR" property="hGender"/>
         <result column="hBir" jdbcType="VARCHAR" property="hBir"/>
+        <result column="hIdCard" jdbcType="VARCHAR" property="hIdCard"/>
         <result column="hAddress" jdbcType="VARCHAR" property="hAddress"/>
         <result column="hZipCode" jdbcType="VARCHAR" property="hZipCode"/>
         <result column="aName" jdbcType="VARCHAR" property="aName"/>
         <result column="aGender" jdbcType="VARCHAR" property="aGender"/>
         <result column="aBir" jdbcType="VARCHAR" property="aBir"/>
+        <result column="aIdCard" jdbcType="VARCHAR" property="aIdCard"/>
         <result column="aAddress" jdbcType="VARCHAR" property="aAddress"/>
         <result column="aZipCode" jdbcType="VARCHAR" property="aZipCode"/>
         <result column="iId" jdbcType="INTEGER" property="iId"/>
@@ -29,7 +31,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        Pid,hName,hGender,hBir,hAddress,hZipCode,aName,aGender,aBir,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
+        Pid,hName,hGender,hBir,hIdCard,hAddress,hZipCode,aName,aGender,aBir,aIdCard,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
     </sql>
 
     <select id="selectByPid" parameterType="java.lang.String" resultMap="BaseResultMap">
