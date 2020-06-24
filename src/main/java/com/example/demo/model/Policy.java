@@ -57,6 +57,39 @@ public class Policy {
 
     private int status;
 
+    public Policy(){
+
+    }
+
+    public Policy(String pid, String date, String hName, String hGender, String hBir, String hIdCard, String hAddress, String hZipCode, String aName, String aGender, String aBir, String aIdCard, String aAddress, String aZipCode, int iId, String iName, String jobNumber, String sName, String sPhone, String bName1, int bNumber1, String bIdCard1, String bName2, int bNumber2, String bIdCard2, int status) {
+        this.pid = pid;
+        this.date = date;
+        this.hName = hName;
+        this.hGender = hGender;
+        this.hBir = hBir;
+        this.hIdCard = hIdCard;
+        this.hAddress = hAddress;
+        this.hZipCode = hZipCode;
+        this.aName = aName;
+        this.aGender = aGender;
+        this.aBir = aBir;
+        this.aIdCard = aIdCard;
+        this.aAddress = aAddress;
+        this.aZipCode = aZipCode;
+        this.iId = iId;
+        this.iName = iName;
+        this.jobNumber = jobNumber;
+        this.sName = sName;
+        this.sPhone = sPhone;
+        this.bName1 = bName1;
+        this.bNumber1 = bNumber1;
+        this.bIdCard1 = bIdCard1;
+        this.bName2 = bName2;
+        this.bNumber2 = bNumber2;
+        this.bIdCard2 = bIdCard2;
+        this.status = status;
+    }
+
     public String getPid() {
         return pid;
     }

@@ -6,6 +6,7 @@ import com.example.demo.service.SalesmenService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class SalesmenServiceImpl implements SalesmenService {
@@ -16,6 +17,12 @@ public class SalesmenServiceImpl implements SalesmenService {
     @Override
     public Salesmen selectByJobNumber(String jobNumber) {
         Salesmen salesmen = salesmenDao.selectByJobNumber(jobNumber);
+        return salesmen;
+    }
+
+    @Override
+    public List<Salesmen> selectAll() {
+        List<Salesmen> salesmen = salesmenDao.selectAll();
         return salesmen;
     }
 }

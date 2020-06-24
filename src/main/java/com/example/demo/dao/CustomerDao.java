@@ -11,4 +11,5 @@ public interface CustomerDao {
 
     int insertCustomer(@Param("customer") Customer customer);
 
+    int updateInfo(@Param("idCard") String idCard, @Param("name") String name, @Param("gender") String gender, @Param("phone") String phone);
 }

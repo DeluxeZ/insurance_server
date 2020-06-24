@@ -28,4 +28,9 @@
         #{customer.gender}, #{customer.authority}, #{customer.password})
     </insert>
 
+    <update id="updateInfo">
+        update customer
+        set cname = #{name}, phone = #{phone}, gender = gender
+        where idCard = #{idCard}
+    </update>
 </mapper>

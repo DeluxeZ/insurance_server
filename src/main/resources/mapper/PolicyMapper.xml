@@ -61,4 +61,14 @@
         where pid = #{pid}
     </update>
 
+    <insert id="insertPolicy">
+        insert into policy
+        value(#{policy.pid},#{policy.date},#{policy.hName},#{policy.hGender},#{policy.hBir},
+        #{policy.hIdCard},#{policy.hAddress},#{policy.hZipCode},#{policy.aName},#{policy.aGender},
+        #{policy.aBir},#{policy.aIdCard},#{policy.aAddress},#{policy.aZipCode},#{policy.iId},
+        #{policy.iName},#{policy.jobNumber},#{policy.sName},#{policy.sPhone},#{policy.bName1},
+        #{policy.bNumber1},#{policy.bIdCard1},#{policy.bName2},#{policy.bNumber2},#{policy.bIdCard2},
+        #{policy.status})
+    </insert>
+
 </mapper>

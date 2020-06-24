@@ -28,4 +28,8 @@ public class CustomerServiceImpl implements CustomerService {
         return customerDao.insertCustomer(customer);
     }
 
+    @Override
+    public int updateInfo(String idCard, String name, String gender, String phone) {
+        return customerDao.updateInfo(idCard, name, gender, phone);
+    }
 }

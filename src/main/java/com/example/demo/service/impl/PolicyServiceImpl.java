@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.demo.dao.PolicyDao;
 import com.example.demo.model.Policy;
 import com.example.demo.service.PolicyService;
@@ -35,5 +36,10 @@ public class PolicyServiceImpl implements PolicyService {
     @Override
     public int updateStatus(String pid, int status) {
         return policyDao.updateStatus(pid, status);
+    }
+
+    @Override
+    public int insertPolicy(Policy policy) {
+        return policyDao.insertPolicy(policy);
     }
 }

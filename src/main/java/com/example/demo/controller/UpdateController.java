@@ -33,4 +33,9 @@ public class UpdateController {
         return object;
     }
 
+    @PostMapping("change")
+    public int updateInfo(String idCard, String name, String gender, String phone){
+        int re = customerService.updateInfo(idCard, name, gender, phone);
+        return re;
+    }
 }

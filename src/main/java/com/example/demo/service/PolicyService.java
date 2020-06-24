@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.demo.model.Policy;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface PolicyService {
     List<Policy> selectAll(String idCard, int status);
 
     int updateStatus(String pid, int status);
+
+    int insertPolicy(Policy policy);
 }

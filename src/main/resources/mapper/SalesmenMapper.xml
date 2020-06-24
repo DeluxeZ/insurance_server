@@ -22,4 +22,10 @@
         where jobNumber = #{jobNumber,jdbcType=VARCHAR}
     </select>
 
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from salesmen
+    </select>
+
 </mapper>
