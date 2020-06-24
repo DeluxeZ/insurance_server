@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.model.Customer;
 import com.example.demo.service.CustomerService;
+import com.example.demo.service.SalesmenService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,9 @@ public class UpdateController {
 
     @Resource
     private CustomerService customerService;
+
+    @Resource
+    private SalesmenService salesmenService;
 
     @PostMapping("signUp")
     public JSONObject insertCustomer(String idCard, String password, String phone, String birthday, String cname, String gender) {
@@ -36,6 +40,12 @@ public class UpdateController {
     @PostMapping("change")
     public int updateInfo(String idCard, String name, String gender, String phone){
         int re = customerService.updateInfo(idCard, name, gender, phone);
+        return re;
+    }
+
+    @PostMapping("renew")
+    public int renewInfo(String jobNumber, String sname, String gender, String phone){
+        int re = salesmenService.renewInfo(jobNumber, sname, gender, phone);
         return re;
     }
 }

@@ -19,4 +19,8 @@ public interface PolicyDao {
     int updateStatus(@Param("pid") String pid, @Param("status") int status);
 
     int insertPolicy(@Param("policy")Policy policy);
+
+    List<Policy> selectByJobNumber(@Param("jobNumber") String jobNumber, @Param("status") int status);
+
+    List<Policy> selectAllByJob(@Param("jobNumber") String jobNumber);
 }

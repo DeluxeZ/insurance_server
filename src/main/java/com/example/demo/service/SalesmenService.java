@@ -9,4 +9,6 @@ public interface SalesmenService {
     Salesmen selectByJobNumber(String jobNumber);
 
     List<Salesmen> selectAll();
+
+    int renewInfo(String jobNumber, String sname, String gender, String phone);
 }

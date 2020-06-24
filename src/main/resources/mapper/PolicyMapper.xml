@@ -48,11 +48,25 @@
         where HIdCard = #{idCard} and status = #{status}
     </select>
 
+    <select id="selectByJobNumber" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from policy
+        where jobNumber = #{jobNumber} and status = #{status}
+    </select>
+
     <select id="selectAll" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from policy
         where HIdCard = #{idCard}
+    </select>
+
+    <select id="selectAllByJob" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from policy
+        where jobNumber = #{jobNumber}
     </select>
 
     <update id="updateStatus">

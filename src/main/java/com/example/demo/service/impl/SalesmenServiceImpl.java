@@ -25,4 +25,9 @@ public class SalesmenServiceImpl implements SalesmenService {
         List<Salesmen> salesmen = salesmenDao.selectAll();
         return salesmen;
     }
+
+    @Override
+    public int renewInfo(String jobNumber, String sname, String gender, String phone) {
+        return salesmenDao.renewInfo(jobNumber, sname, gender, phone);
+    }
 }

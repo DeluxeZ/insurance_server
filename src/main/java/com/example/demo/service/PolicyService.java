@@ -16,4 +16,8 @@ public interface PolicyService {
     int updateStatus(String pid, int status);
 
     int insertPolicy(Policy policy);
+
+    List<Policy> selectByJobNumber(String jobNumber, int status);
+
+    List<Policy> selectAllByJob(String jobNumber);
 }

@@ -28,4 +28,10 @@
         from salesmen
     </select>
 
+    <update id="renewInfo">
+        update salesmen
+        set sname = #{sname}, phone = #{phone}, gender = gender
+        where jobNumber = #{jobNumber}
+    </update>
+
 </mapper>

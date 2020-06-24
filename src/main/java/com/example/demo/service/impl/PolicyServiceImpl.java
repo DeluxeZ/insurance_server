@@ -42,4 +42,15 @@ public class PolicyServiceImpl implements PolicyService {
     public int insertPolicy(Policy policy) {
         return policyDao.insertPolicy(policy);
     }
+
+    @Override
+    public List<Policy> selectByJobNumber(String jobNumber, int status) {
+        List<Policy> policies = policyDao.selectByJobNumber(jobNumber, status);
+        return policies;
+    }
+
+    @Override
+    public List<Policy> selectAllByJob(String jobNumber) {
+        return policyDao.selectAllByJob(jobNumber);
+    }
 }
