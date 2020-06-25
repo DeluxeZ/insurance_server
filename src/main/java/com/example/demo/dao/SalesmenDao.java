@@ -14,4 +14,6 @@ public interface SalesmenDao {
     List<Salesmen> selectAll();
 
     int renewInfo(@Param("jobNumber") String jobNumber, @Param("sname") String sname, @Param("gender") String gender, @Param("phone") String phone);
+
+    int deleteByJobNumber(@Param("jobNumber") String jobNumber);
 }

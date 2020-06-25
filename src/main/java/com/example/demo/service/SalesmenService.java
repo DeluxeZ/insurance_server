@@ -11,4 +11,6 @@ public interface SalesmenService {
     List<Salesmen> selectAll();
 
     int renewInfo(String jobNumber, String sname, String gender, String phone);
+
+    int deleteByJobNumber(String jobNumber);
 }

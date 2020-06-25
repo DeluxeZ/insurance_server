@@ -9,4 +9,6 @@ public interface InsuranceTypeService {
     InsuranceType selectById(int id);
 
     List<InsuranceType> selectAll();
+
+    int deleteById(int id);
 }

@@ -28,4 +28,9 @@ public class InsuranceTypeServiceImpl implements InsuranceTypeService {
         List<InsuranceType> insuranceTypes = insuranceTypeDao.selectAll();
         return insuranceTypes;
     }
+
+    @Override
+    public int deleteById(int id) {
+        return insuranceTypeDao.deleteById(id);
+    }
 }

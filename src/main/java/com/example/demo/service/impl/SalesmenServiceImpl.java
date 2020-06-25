@@ -30,4 +30,9 @@ public class SalesmenServiceImpl implements SalesmenService {
     public int renewInfo(String jobNumber, String sname, String gender, String phone) {
         return salesmenDao.renewInfo(jobNumber, sname, gender, phone);
     }
+
+    @Override
+    public int deleteByJobNumber(String jobNumber) {
+        return salesmenDao.deleteByJobNumber(jobNumber);
+    }
 }

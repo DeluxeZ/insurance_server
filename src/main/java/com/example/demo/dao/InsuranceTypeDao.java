@@ -12,4 +12,6 @@ public interface InsuranceTypeDao {
     InsuranceType selectById(@Param("id") int id);
 
     List<InsuranceType> selectAll();
+
+    int deleteById(@Param("id") int id);
 }

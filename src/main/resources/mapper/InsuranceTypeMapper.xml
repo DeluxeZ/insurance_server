@@ -29,4 +29,9 @@
         from insuranceType order by id
     </select>
 
+    <delete id="deleteById">
+        delete from insuranceType
+        where id = #{id, jdbcType=INTEGER}
+    </delete>
+
 </mapper>

@@ -34,4 +34,9 @@
         where jobNumber = #{jobNumber}
     </update>
 
+    <delete id="deleteByJobNumber">
+        delete from salesmen
+        where jobNumber = #{jobNumber, jdbcType=VARCHAR}
+    </delete>
+
 </mapper>

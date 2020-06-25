@@ -32,4 +32,10 @@ public class InsuranceTypeController {
         List<InsuranceType> insuranceTypes = insuranceTypeService.selectAll();
         return insuranceTypes;
     }
+
+    @PostMapping("delete")
+    public int deleteBuId(int id) {
+        int re = insuranceTypeService.deleteById(id);
+        return re;
+    }
 }
