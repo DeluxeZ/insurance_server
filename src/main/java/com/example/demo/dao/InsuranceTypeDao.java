@@ -14,4 +14,6 @@ public interface InsuranceTypeDao {
     List<InsuranceType> selectAll();
 
     int deleteById(@Param("id") int id);
+
+    int insert(@Param("insuranceType") InsuranceType insuranceType);
 }

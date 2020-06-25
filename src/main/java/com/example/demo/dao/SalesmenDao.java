@@ -16,4 +16,7 @@ public interface SalesmenDao {
     int renewInfo(@Param("jobNumber") String jobNumber, @Param("sname") String sname, @Param("gender") String gender, @Param("phone") String phone);
 
     int deleteByJobNumber(@Param("jobNumber") String jobNumber);
+
+    int insert(@Param("jobNumber") String jobNumber, @Param("idCard") String idCard, @Param("sname") String sname,
+               @Param("phone") String phone, @Param("gender") String gender, @Param("password") String password);
 }

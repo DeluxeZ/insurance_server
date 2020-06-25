@@ -11,4 +11,6 @@ public interface InsuranceTypeService {
     List<InsuranceType> selectAll();
 
     int deleteById(int id);
+
+    int insert(InsuranceType insuranceType);
 }

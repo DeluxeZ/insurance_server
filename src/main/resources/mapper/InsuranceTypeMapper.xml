@@ -34,4 +34,10 @@
         where id = #{id, jdbcType=INTEGER}
     </delete>
 
+    <delete id="insert">
+        insert into insuranceType(iname,ageStart,ageEnd,benefit,payment,premium,advantage)
+        value(#{insuranceType.iname},#{insuranceType.ageStart},#{insuranceType.ageEnd},#{insuranceType.benefit},
+        #{insuranceType.payment},#{insuranceType.premium},#{insuranceType.advantage})
+    </delete>
+
 </mapper>

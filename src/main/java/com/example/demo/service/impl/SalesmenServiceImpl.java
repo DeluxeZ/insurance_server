@@ -35,4 +35,9 @@ public class SalesmenServiceImpl implements SalesmenService {
     public int deleteByJobNumber(String jobNumber) {
         return salesmenDao.deleteByJobNumber(jobNumber);
     }
+
+    @Override
+    public int insert(String jobNumber, String idCard, String sname, String phone, String gender, String password) {
+        return salesmenDao.insert(jobNumber, idCard, sname, phone, gender, password);
+    }
 }

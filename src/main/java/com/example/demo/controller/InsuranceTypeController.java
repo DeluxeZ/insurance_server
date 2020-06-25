@@ -43,7 +43,10 @@ public class InsuranceTypeController {
     @PostMapping("insert")
     public int insert(String data) {
         JSONObject jsonObject = JSONObject.parseObject(data);
-        System.out.println(data);
-        return 1;
+        InsuranceType insuranceType = new InsuranceType(0, jsonObject.getString("iname"), jsonObject.getString("ageStart"),
+                jsonObject.getString("ageEnd"), jsonObject.getString("benefit"), jsonObject.getString("payment"),
+                jsonObject.getInteger("premium"), jsonObject.getString("advantage"));
+        int re = insuranceTypeService.insert(insuranceType);
+        return re;
     }
 }

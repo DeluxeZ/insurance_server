@@ -13,4 +13,6 @@ public interface SalesmenService {
     int renewInfo(String jobNumber, String sname, String gender, String phone);
 
     int deleteByJobNumber(String jobNumber);
+
+    int insert(String jobNumber, String idCard, String sname, String phone, String gender, String password);
 }

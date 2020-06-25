@@ -39,4 +39,9 @@
         where jobNumber = #{jobNumber, jdbcType=VARCHAR}
     </delete>
 
+    <insert id="insert">
+        insert into salesmen
+        value(#{jobNumber}, #{idCard}, #{sname}, 2, #{phone}, #{gender}, #{password})
+    </insert>
+
 </mapper>

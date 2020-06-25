@@ -33,4 +33,9 @@ public class InsuranceTypeServiceImpl implements InsuranceTypeService {
     public int deleteById(int id) {
         return insuranceTypeDao.deleteById(id);
     }
+
+    @Override
+    public int insert(InsuranceType insuranceType) {
+        return insuranceTypeDao.insert(insuranceType);
+    }
 }
