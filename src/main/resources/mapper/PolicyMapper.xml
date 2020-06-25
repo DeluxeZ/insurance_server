@@ -31,7 +31,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        Pid,hName,hGender,hBir,hIdCard,hAddress,hZipCode,aName,aGender,aBir,aIdCard,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
+        Pid,date,hName,hGender,hBir,hIdCard,hAddress,hZipCode,aName,aGender,aBir,aIdCard,aAddress,aZipCode,iId,iName,jobNumber,sName,sPhone,bName1,bNumber1,bIdCard1,bName2,bNumber2,bIdCard2,status
     </sql>
 
     <select id="selectByPid" parameterType="java.lang.String" resultMap="BaseResultMap">
@@ -84,5 +84,11 @@
         #{policy.bNumber1},#{policy.bIdCard1},#{policy.bName2},#{policy.bNumber2},#{policy.bIdCard2},
         #{policy.status})
     </insert>
+
+    <select id="select" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from policy
+    </select>
 
 </mapper>

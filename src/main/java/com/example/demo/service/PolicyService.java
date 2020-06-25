@@ -20,4 +20,6 @@ public interface PolicyService {
     List<Policy> selectByJobNumber(String jobNumber, int status);
 
     List<Policy> selectAllByJob(String jobNumber);
+
+    List<Policy> select();
 }

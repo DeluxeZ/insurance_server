@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.demo.model.InsuranceType;
 import com.example.demo.service.InsuranceTypeService;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -37,5 +38,12 @@ public class InsuranceTypeController {
     public int deleteBuId(int id) {
         int re = insuranceTypeService.deleteById(id);
         return re;
+    }
+
+    @PostMapping("insert")
+    public int insert(String data) {
+        JSONObject jsonObject = JSONObject.parseObject(data);
+        System.out.println(data);
+        return 1;
     }
 }

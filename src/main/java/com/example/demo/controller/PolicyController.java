@@ -72,4 +72,10 @@ public class PolicyController {
         int re = policyService.insertPolicy(policy);
         return re;
     }
+
+    @PostMapping("policyList")
+    public List<Policy> select() {
+        List<Policy> policies = policyService.select();
+        return policies;
+    }
 }

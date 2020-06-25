@@ -53,4 +53,10 @@ public class PolicyServiceImpl implements PolicyService {
     public List<Policy> selectAllByJob(String jobNumber) {
         return policyDao.selectAllByJob(jobNumber);
     }
+
+    @Override
+    public List<Policy> select() {
+        List<Policy> policies = policyDao.select();
+        return policies;
+    }
 }

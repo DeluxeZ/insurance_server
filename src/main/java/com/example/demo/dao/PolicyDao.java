@@ -23,4 +23,6 @@ public interface PolicyDao {
     List<Policy> selectByJobNumber(@Param("jobNumber") String jobNumber, @Param("status") int status);
 
     List<Policy> selectAllByJob(@Param("jobNumber") String jobNumber);
+
+    List<Policy> select();
 }

@@ -21,6 +21,22 @@ public class InsuranceType {
 
     private String advantage;
 
+    public InsuranceType() {
+
+    }
+
+    public InsuranceType(int id, String iname, String ageStart, String ageEnd,
+                         String benefit, String payment, int premium, String advantage) {
+        this.id = id;
+        this.iname = iname;
+        this.ageStart = ageStart;
+        this.ageEnd = ageEnd;
+        this.benefit = benefit;
+        this.payment = payment;
+        this.premium = premium;
+        this.advantage = advantage;
+    }
+
     /**
      * @return id
      */
